@@ -22,13 +22,22 @@ docker-compose up -d
 ```
 docker-compose ps
 ```
-El contenedor web debe estar corriendo perfectamente en la dirección http://localhost:8002
+El contenedor web debe estar corriendo perfectamente en la dirección [Localización del API](http://localhost:8002)
 Dado que el contenedor PHP no ha levantado, ejecutar lo siguiente:
 ```
 docker run -it brandlivetest_api-backend:latest -p 8002:8000 -v $PWD/api/.:/var/www/html/ php -S 0.0.0.0:8000 public/index.php 
 ```
 Una vez inicializado el servicio, se podrá acceder 
-* Vía request: http://localhost:8002/api?letters={string_a_examilar}&limit={cantidad_maxima_de_letras_a_conformar_nueva_palabra}&lang={idioma}
+*Vía request
+```
+http://localhost:8002/api?letters={string_a_examilar}&limit={cantidad_maxima_de_letras_a_conformar_nueva_palabra}&lang={idioma}
+```
+
+* Parámetros
+    - letters
+    - limit
+    - lang
+    
 * Opciones de idioma:
     - en para ingles
     - es para español
