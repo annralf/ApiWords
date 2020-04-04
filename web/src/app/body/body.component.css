@@ -1,0 +1,119 @@
+.body-main-row:nth-child(odd){
+    width: 100vw;
+    height: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.body-main-row:nth-child(even){
+    width: 100vw;
+    height: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.body-main-row > div{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-main-row > div:nth-of-type(1){
+    background-size: cover;
+    filter: contrast(0.5);
+}
+
+.body-main-row > div:nth-of-type(1) > span{
+border: 1px solid white;
+    width: 8vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 0.9em;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.body-main-row:nth-child(odd) > img{
+    position: absolute;
+    z-index: 1000;
+    top: 37.5%;
+    left: 49%;
+}
+
+.body-main-row:nth-child(even) > img{
+    position: absolute;
+    z-index: 1000;
+    top: 37.5%;
+    right: 49%;
+}
+
+.body-main-row > div:nth-of-type(2) > hr{
+    width: 5%;
+}
+.body-main-row > div:nth-of-type(2) > span:nth-of-type(2) {
+    word-break: break-word;
+    width: 40%;
+    text-align: center;
+    color: #565656;
+    font-weight: 500;
+    padding: 5% 0px;
+}
+.body-main-row > div:nth-of-type(2) > span:nth-of-type(1) {
+    padding: 5% 0px;
+}
+.body-main-row > div:nth-of-type(2) > span:nth-of-type(1) > b{
+    font-size: 2em;
+    font-weight: 400;
+    margin: 2% 0px;
+}
+
+.body-main-row > div:nth-of-type(2) > span:nth-of-type(3) {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #565656;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .body-main-row{
+        flex-direction: column;
+    }
+    .body-main-row > div{
+        width: 100vw;
+        height: 50%;
+        z-index: 1;
+        background-color: white;
+    }
+    .body-main-row:nth-child(odd){
+        flex-direction: column;
+    }
+    .body-main-row:nth-child(even){
+        flex-direction: column;
+    }
+    .body-main-row:nth-child(odd) > img{
+        position: absolute;
+        z-index: 1;
+        top: 47%;
+        left: 40%;
+    }
+    
+    .body-main-row:nth-child(even) > img{
+        position: absolute;
+        z-index: 1;
+        top:  47%;
+        right: 40%;
+    }
+    .body-main-row > div:nth-of-type(1) > span{
+            width: 30%;
+        }
+        
+
+}

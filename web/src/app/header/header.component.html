@@ -1,0 +1,66 @@
+<mat-toolbar (scroll)="divScroll($event)" *ngIf="navBar" class="desktop">
+  <mat-toolbar-row>
+    <div class="col-sm col-md">
+      <img [src]="logo">
+    </div>
+    <div class="menu-items-main">
+      <ul class="menu-list">
+        <li *ngFor="let menu of menues; let i = index">
+          <div class="menu-items">
+            <img [src]="menu.image"/>
+            <span>{{menu.content}}</span>
+          </div>
+          <mat-divider [vertical]="true" *ngIf="menu.divider" class="menu-divider-list"></mat-divider>
+        </li>
+      </ul>
+    </div>  
+    <div class="menu-user">
+      <span>mi compra</span>  
+      <mat-divider [vertical]="true" class="menu-divider"></mat-divider>
+      <span>mi compra</span>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>  
+<mat-toolbar (scroll)="divScroll($event)" *ngIf="navBar" class="mobile">
+  <mat-toolbar-row>
+    <div class="col-sm col-md">
+      <img [src]="logo" class="logo">
+    </div>
+    <div class="menu-user">
+      <img [src]="menu">
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar> 
+<div>
+  <mat-carousel
+  [timings]="timings"
+  [autoplay]="autoplay"
+  [interval]="interval"
+  color="color"
+  [maxWidth]="maxWidth"
+  [proportion]="proportion"
+  [slides]="slides"
+  [loop]="loop"
+  [hideIndicators]="hideIndicators"
+  [hideArrows]="hideArrows"
+  [useKeyboard]="useKeyboard"
+  [orientation]="orientation"
+  >
+  <mat-carousel-slide
+    #matCarouselSlide
+    *ngFor="let slide of images; let i = index"
+    [image]="slide.image"
+    [overlayColor]="overlayColor"
+    [hideOverlay]="hideOverlay"
+  >
+  </mat-carousel-slide>
+  </mat-carousel>
+  <div class="main-title">
+    <div>
+      <h1>estar cómodo,<br>nunca fué tan fácil.</h1>
+    </div>
+    <div>
+      <span>shop</span>
+    </div>
+  </div> 
+</div>

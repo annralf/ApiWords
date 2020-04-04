@@ -1,0 +1,14 @@
+<div class="body-main-row" *ngFor="let prod of products; let i = index">
+    <div  [ngStyle]="{'background-image': prod.product.css}">
+        <span>shop</span>
+    </div>
+    <img [src]="divisor">
+    <div>
+        <img [src]="prod.product.img">
+        <span><b>{{prod.product.title}}</b></span>
+        <hr>
+        <span>{{prod.product.description}}</span>
+        <span>{{prod.product.cta}}</span>
+
+    </div>
+</div>

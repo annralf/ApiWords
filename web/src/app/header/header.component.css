@@ -1,0 +1,143 @@
+.mobile{
+    display: none;
+}
+.menu-list{
+    list-style: none;
+    display: flex;
+}
+.menu-list > li{
+    display: flex;
+}
+.menu-items-main{
+    width: 76vw;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    vertical-align: baseline;
+}
+.menu-divider-list{
+   height: 8vh;
+   border-right-color: #ffffff5c;
+}
+.menu-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 10vw;
+        font-size: 10px;
+        vertical-align: baseline;
+}
+.menu-items > img{
+   height: 35%;
+}
+
+mat-toolbar {
+    background: #21212100;
+    color: #fff;
+    margin: 2%;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 100;
+}
+
+.menu-user{
+    display: flex;
+    position: absolute;
+    right: 5%;
+    font-size: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-divider{
+    height: 15px;
+    border-right-color: #ffffff5c;
+    margin: 0px 10px;
+}
+.main-title{
+    z-index: 100;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+.main-title > div{
+    text-align: center;
+    margin-bottom: 10%;
+    position: relative;
+}
+.main-title > div:nth-of-type(1)> h1{
+    font-size: 4em;
+    line-height: initial;
+    color: white;
+    position: relative;
+}
+
+.main-title > div:nth-of-type(2) {
+    border: 1px solid white;
+    width: 8vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 0.9em;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+@media only screen and (max-width: 600px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .logo{
+        width: 50%;
+    }
+    .main-title{
+        z-index: 100;
+        position: absolute;
+        top: 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-transform: uppercase;
+    }
+    .main-title > div{
+        text-align: center;
+        margin-bottom: 5%;
+        position: relative;
+    }
+    .main-title > div:nth-of-type(1)> h1{
+        font-size: 1.1em;
+        line-height: initial;
+        color: white;
+        position: relative;
+    }
+    
+    .main-title > div:nth-of-type(2) {
+        border: 1px solid white;
+        width: 15%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 0.9em;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    .menu-user{
+        font-size: 10px;
+        flex-direction: row;
+        width: 20%;
+        text-align: right;
+    }
+    .menu-user > img{
+        width: 10%;
+    }
+  }

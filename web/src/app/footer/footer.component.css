@@ -1,0 +1,82 @@
+.footer-main{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.fotter-section{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.fotter-section > ul {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.sec-5 > img{
+    height: 15%;
+    padding: 0px 4%;
+}
+.sec-4 > span:nth-child(1), .sec-5 > b, li{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+li{
+    padding: 1% 0px;
+}
+.sec-4 > div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+}
+.sec-4 > div > img{
+    height: 50%;
+    margin-right: 1%;
+}
+.sec-4 > div > div{
+    width: 31%;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+}
+
+.sec-5{
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+}
+.logo{
+    width: 30%;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+footer > div{
+   width: 50vw;
+}
+footer > div:nth-child(2){
+    margin-right: 1%;
+    text-align: end;
+ }
+
+ @media only screen and (max-width: 600px) {
+    .footer-main{
+        flex-direction: column;
+    }
+    .fotter-section{
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .sec-4{
+        margin-left: 10%;
+    }
+    .logo{
+        width: 15%;
+    }
+ }
