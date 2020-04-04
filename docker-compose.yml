@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  web:
+    image: mbweb_a8:latest
+    container_name: web
+    ports:
+      - 4202:4200
+    volumes:
+      - $PWD/web/.:/app
+    links:
+      - "api-backend:api"
+  api-backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-backend
+    ports: 
+      - 8002:8000
+    volumes:
+      - $PWD/api/.:/var/www/html
+    
