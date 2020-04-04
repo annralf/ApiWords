@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   web:
-    image: mbweb_a8:latest
+    image: annralf/angular:latest
     container_name: web
     ports:
       - 4202:4200
